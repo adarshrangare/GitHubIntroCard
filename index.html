@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github API Fetching</title>
+    
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      
+   
+</head>
+<style>
+    
+    @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        background-color: #212121;
+        /* background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center / cover no-repeat fixed; */
+        font-family: 'Inter',sans-serif;
+        background: url(https://images.pexels.com/photos/396547/pexels-photo-396547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        
+    }
+    main{
+        position: absolute;
+        
+        transform : translate(calc(50vw - 300px), calc(50vh - 200px));
+    }
+    .container{
+        
+        background-color: rgba(122, 122, 122, 0.232);
+        width: 600px;
+        height: 400px;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgb(255, 255, 255);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        gap: 20px;
+        box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.107);
+        transform: translate(calc(50vw - 300px), calc(50vh - 200px));
+        padding-bottom: 4rem;
+        transition: .5s ease-in;
+        cursor: pointer;
+    }
+
+    
+
+
+    
+    .image{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 5px solid rgb(194, 36, 252);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.353);
+        object-fit: center;
+        /* overflow: hidden; */
+    }
+    
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    
+    h1{
+        margin-top: 1rem;
+        font-size: 2.5rem;
+        color: #fff;
+        letter-spacing: .1rem;
+        font-weight: 500;
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.303);
+    }
+
+    h4{
+        font-size: 1.6rem;
+        color: #fff;
+        letter-spacing: .1rem;
+        font-weight: 400;
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.303);
+   
+    }
+
+    #loc{
+        font-size: 1.3rem;
+        display: flex;
+        gap: 1rem;
+        color: #fff;
+        font-weight: 400;
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.303);
+        
+    }
+
+</style>
+<body>
+    <main>
+    <div class="container">
+            </p>
+
+        <div class="image">
+
+        </div>
+        <h1 id="fullname"></h1>
+        <h4 id="bio"></h4>
+        <div id="loc"> <span class="material-icons">
+            location_on
+            </span> <span id="location">
+                          
+            </span></div>
+        
+
+
+    </div>
+</main>
+</body>
+<script src="index.js"></script>
+<script src="vanilla-tilt.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelector(".container"), {
+		max: 25,
+		speed: 400,
+        glare: true, 
+                     
+	});
+	
+	//It also supports NodeList
+	VanillaTilt.init(document.querySelectorAll(".container"));
+</script>
+</html>
